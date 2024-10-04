@@ -1,0 +1,36 @@
+Quando for criar qualquer coisa na API, tentar seguir essa logica aqui:
+
+
+1- Model: não depende de ninguem.
+2- Repository: Depende somente do Model
+3- Service: Depende somente do repository e o Model.
+4- Controller: Depende somente do service e o Model.
+
+
+=======================
+
+
+Pizza
+    id
+    nome
+    modelo (tamanho e valor)
+    ingredientes [Ingredientes]
+    observação
+    tipo Etipo (SALGADA OU DOCE, AGRI_DOCE)
+
+
+Ingrediente OK
+    id
+    nome
+    dataValidade
+    observação
+
+var pizza new Pizza();
+pizza.nome = "Quatro queijos"
+pizza.modelos.add(new Modelo("Grande", 25.00));
+pizza.modelos.add(new Modelo("Medio", 15.00));
+pizza.tipo = ETipo.SALGADA
+
+
+
+
